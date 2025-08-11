@@ -15,7 +15,6 @@ sales_file = st.sidebar.file_uploader("매출자료 업로드", type=["xlsx"])
 purchase_file = st.sidebar.file_uploader("매입자료 업로드", type=["xlsx"])
 stock_file = st.sidebar.file_uploader("현재고 업로드", type=["xlsx"])
 logo_upload = st.sidebar.file_uploader("로고 이미지(선택)", type=["png","jpg","jpeg","webp"])
-name_map_file = st.sidebar.file_uploader("명칭 매핑표(선택: from,to)", type=["xlsx","csv"])
 
 c1, c2 = st.columns([1, 5])
 with c1:
@@ -23,14 +22,14 @@ with c1:
         if logo_upload is not None:
             st.image(logo_upload, width=100)
         elif os.path.exists("로고리뉴얼.png"):
-            st.image("로고리뉴얼.png", width=100)
+            st.image("로고리뉴얼.png", width=300)
         else:
             st.empty()
     except Exception:
         st.empty()
 with c2:
-    st.title("💊 신명약품 자동발주 – 수량 중심")
-    st.caption("가격/단가 제외 · 현재고/매출/입고 대비 발주수량 중심. 제조사/매입처 인식 보정 및 가독성 높은 엑셀 출력 지원.")
+    st.title("💊 신명약품 자동발주")
+    st.caption("엑셀 출력 지원.")
 
 st.sidebar.divider()
 mode = st.sidebar.radio("📅 분석 기간", ["자동 (최근 3개월)", "수동 지정"])
