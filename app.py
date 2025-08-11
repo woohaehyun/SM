@@ -176,6 +176,10 @@ if sales_file and purchase_file and stock_file:
 
     # 명칭 매핑표(선택) 로드
     map_df = None
+    name_map_file = st.sidebar.file_uploader("명칭 매핑표 업로드(선택)", type=["xlsx", "csv"])
+if name_map_file is not None:
+    # 매핑 로직
+
     if name_map_file is not None:
         try:
             if name_map_file.name.lower().endswith(".csv"):
