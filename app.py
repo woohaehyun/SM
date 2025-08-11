@@ -22,13 +22,13 @@ with c1:
         if logo_upload is not None:
             st.image(logo_upload, width=100)
         elif os.path.exists("로고리뉴얼.png"):
-            st.image("로고리뉴얼.png", width=260)
+            st.image("로고리뉴얼.png", width=250)
         else:
             st.empty()
     except Exception:
         st.empty()
 with c2:
-    st.title("  💊 신명약품 자동발주  ")
+    st.title("💊 신명약품 자동발주앱")
 
 st.sidebar.divider()
 mode = st.sidebar.radio("📅 분석 기간", ["자동 (최근 3개월)", "수동 지정"])
