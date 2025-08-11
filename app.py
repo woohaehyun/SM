@@ -16,7 +16,7 @@ purchase_file = st.sidebar.file_uploader("매입자료 업로드", type=["xlsx"]
 stock_file = st.sidebar.file_uploader("현재고 업로드", type=["xlsx"])
 logo_upload = st.sidebar.file_uploader("로고 이미지(선택)", type=["png","jpg","jpeg","webp"])
 
-c1, c2 = st.columns([1, 5])
+c1, c2 = st.columns([1, 6])
 with c1:
     try:
         if logo_upload is not None:
