@@ -380,5 +380,5 @@ if sales_file and purchase_file and stock_file:
             xls_buffer.seek(0)
             st.download_button("📄 엑셀 다운로드", data=xls_buffer, file_name=f"발주서_탭구분_최근{selected_days}일.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 else:
-    st.info("📂 사이드바에서 **매출자료, 매입자료, 현재고** 파일을 모두 업로드하세요.
-    엑셀자료를 분석하여 발주수량 데이터 추출가능합니다")
+    st.info("📂 사이드바에서 **매출자료, 매입자료, 현재고** 파일을 모두 업로드하세요")
+    st.info("📂 엑셀자료를 분석하여 발주서를 만들어 드리겠습니다")
