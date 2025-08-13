@@ -424,5 +424,4 @@ if sales_file and purchase_file and stock_file:
 else:
     st.info(
         "📂 **좌측 사이드바**에서 **매출 자료, 매입 자료, 현재고** 파일을 모두 업로드하세요.\n\n"
-        "📂 매입처 컬럼이 없어도 **제조사 기준 발주서**를 생성할 수 있습니다."
-    )
+        
