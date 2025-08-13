@@ -42,14 +42,14 @@ with c1:
         if logo_upload is not None:
             st.image(logo_upload, width=100)
         elif os.path.exists("로고리뉴얼.png"):
-            st.image("로고리뉴얼.png", width=100)
+            st.image("로고리뉴얼.png", width=230)
         else:
             st.empty()
     except Exception:
         st.empty()
 with c2:
-    st.title("💊 신명약품 자동발주앱 — 제조사 기준 전용")
-    st.caption("매입처 없이 **제조사별 발주서**를 생성합니다. 가격/단가 제외, 수량 중심.")
+    st.title("💊 신명약품 자동발주앱")
+    
 
 # ======== 유틸 ========
 PLACEHOLDER_SET = {"", "NONE", "NAN", "NULL", "-", "미정", "기타", "미지정"}
@@ -323,7 +323,7 @@ if sales_file and purchase_file and stock_file:
     # ===== 엑셀 내보내기 =====
     st.divider()
     st.subheader("📥 발주서 내보내기 (제조사 기준)")
-    st.caption("양식에서 **매입처 열은 포함하지 않습니다.** 제조사별로만 파일/탭이 생성됩니다.")
+  
 
     export_df = merged.copy()
     export_cols = [c for c in base_cols if c in export_df.columns]  # 매입처 없음
@@ -355,5 +355,5 @@ if sales_file and purchase_file and stock_file:
 else:
     st.info(
         "📂 **좌측 사이드바**에서 **매출 자료, 매입 자료, 현재고** 파일을 모두 업로드하세요.\n\n"
-        "매입처 컬럼이 없어도 **제조사 기준 발주서**를 생성할 수 있습니다."
+       
     )
