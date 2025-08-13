@@ -7,7 +7,7 @@ import os
 import re
 from datetime import timedelta
 
-st.set_page_config(page_title="신명약품 자동발주(제조사 기준 지원)", layout="wide")
+st.set_page_config(page_title="신명약품 자동발주", layout="wide")
 
 # ============= 사이드바 / 헤더 =============
 st.sidebar.header("📂 파일 업로드")
