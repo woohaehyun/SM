@@ -49,15 +49,14 @@ with c1:
         if logo_upload is not None:
             st.image(logo_upload, width=100)
         elif os.path.exists("로고리뉴얼.png"):
-            st.image("로고리뉴얼.png", width=100)
+            st.image("로고리뉴얼.png", width=230)
         else:
             st.empty()
     except Exception:
         st.empty()
 with c2:
-    st.title("💊 신명약품 자동발주앱 — 제조사 기준 지원")
-    st.caption("매입처 컬럼 없이도 **제조사별 발주서**를 생성합니다. 가격/단가 제외, 수량 중심.")
-
+    st.title("💊 신명약품 자동발주앱")
+   
 # ======== 유틸 ========
 def normalize_columns(df, mapping):
     df = df.copy()
